@@ -10,8 +10,8 @@ const useFetch = (urlParams) => {
     try {
       const response = await fetch(url);
       const data = await response.json();
-
       if (data.Response === "True") {
+        //Handle Single movie object
         setData(data.Search || data);
 
         setError({ show: false, msg: "" });
